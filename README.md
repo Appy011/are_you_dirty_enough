@@ -37,7 +37,7 @@ Librosa library was used to extract the features from the audio files. All of th
 
 #### Zero Crossing Rate (ZCR):
 
-ZRC is the measure of the rate at which a signal changes the sign. It is recorded on both instances, namely 'positive-zero-negative' and 'negative-zero-positive'. This is an important feature which is used in speech recognition as well as music information retrieval. It is applied to detect whether human speech is present in the audio segment.
+ZRC is the measure of the rate at which a signal changes the sign. It is recorded on both instances, namely 'positive-zero-negative' and 'negative-zero-positive'. In essence, it measures the dominant frequency of the signal. This is an important feature which is used in speech recognition as well as music information retrieval. It is applied to detect whether human speech is present in the audio segment.
 The plot shown below will provide a visual representation of how ZCR is calculated,
 
 <p align="center"><img src="images/zrc.png" /p>
@@ -46,7 +46,7 @@ The first graph shows one clean audio waveplot. The second one is zooming in to 
 
 #### Spectral Centroid:
 
-Spectral Centroid is one of the features used to characterize specturm. It indicates the center of mass of the spectrum. It is widely used in digital audio and music processing to measure the perceived sound quality. 
+Spectral Centroid is one of the features used to characterize specturm. It indicates the balancing point of the spectral ower distribution. It is widely used in digital audio and music processing to measure the perceived sound quality. 
 
 <p align="center"><img src="images/spectral_centroid.png" /p>
 
