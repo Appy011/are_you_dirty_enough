@@ -38,6 +38,10 @@ Librosa library was used to extract the features from the audio files. All of th
 ZRC is the measure of the rate at which a signal changes the sign. It is recorded on both instances, namely 'positive-zero-negative' and 'negative-zero-positive'. This is an important feature which is used in speech recognition as well as music information retrieval. It is applied to detect whether human speech is present in the audio segment.
 The plot shown below will provide a visual representation of how ZCR is calculated,
 
+<p align="center"><img src="images/zrc.png" /p>
+
+The first graph shows one clean audio waveplot. The second one is zooming in to observe how many times the signal crosses zero. Even though the second plot shows 4 times, the signal is fluctuating. Hence, further inspection is needed which can be observed in the third plot. 
+
 #### RMSE:
 
 #### Spectral Centroid:
