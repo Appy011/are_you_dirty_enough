@@ -101,9 +101,9 @@ The graph above shows that MFCC1 is definately one of the most important feature
 
 The feature importance was run repitatively for 7 times and the most common  7 features that showed up selected. These features were then run through Logistic Regression and plotted ROC and Precision-Recall curves. They are shown below,
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/ROC_top_features.png" /p>
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/precision_recall_top_features.png" /p>
 
 These plots above clearly show that there is no leakage as there is no close correlation between the features and the original model curves. Nevertheless, MFCC1 seems to have an heavy influence on the classification of the used data. The accuracy for MFCC1 alone using Logistic Regression seems to vary from 0.81 to 0.88 with an R-square from 0.27 to 0.55.
 
