@@ -31,7 +31,7 @@ The following waveplots of the first clean and noisy audio file will provide a v
 
 # Feature Selection
 
-<p align="center"><img src="https://docs.google.com/presentation/d/1zzgNu_HbKL2iPkHS8-qhtDV20QfWt9lC3ZwPVZo8Rw0/pub?start=false&loop=false&delayms=3000&slide=id.g5a7a9806e_0_84" /p>
+<p align="center"><img src="images/signal_decomposition.png" /p>
 
 Librosa library was used to extract the features from the audio files. All of the 1650 audio files were individually divided into the following features,
 
