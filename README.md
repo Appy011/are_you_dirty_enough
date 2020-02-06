@@ -1,6 +1,6 @@
 # Are You Noisy Enough?
 
-by [Chinmay Purav](https://www.linkedin.com/in/puravchinmay/)
+by <img src= "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_square_color-512.png" width="15"> [Chinmay Purav](https://www.linkedin.com/in/puravchinmay/)
 
 
 # Table of Contents
