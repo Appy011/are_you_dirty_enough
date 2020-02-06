@@ -42,17 +42,21 @@ The plot shown below will provide a visual representation of how ZCR is calculat
 
 The first graph shows one clean audio waveplot. The second one is zooming in to observe how many times the signal crosses zero. Even though the second plot shows 4 times, the signal is fluctuating. Hence, further inspection is needed which can be observed in the third plot. 
 
-#### RMSE:
-
 #### Spectral Centroid:
 
-#### Spectral Bandwidth:
+<p align="center"><img src="images/spectral_centroid.png" /p>
 
 #### Spectral Rolloff:
 
+<p align="center"><img src="images/spectral_rolloff.png" /p>
+
 #### Chroma Frequencies:
 
+<p align="center"><img src="images/chroma_frequencies.png" /p>
+
 #### Mel-frequency cepstral coefficients:
+
+<p align="center"><img src="images/mfcc.png" /p>
 
 
 # Exploratory-Data-Analysis
