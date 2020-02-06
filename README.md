@@ -60,8 +60,12 @@ Spectral Centroid is one of the features used to characterize specturm. It indic
 
 #### Mel-frequency cepstral coefficients:
 
-<p align="center"><img src="images/mfcc.png" /p>
+Mel-frequency Cepstrum represents short-term power spectrum of sound. The coefficients collectively form the Cepstrum. The difference between Mel-frequency Cepstrum and Cepstrum is that the frequencies in the Mel-frequncy Cepstrum are equally spaced. This is commonly used in speech recognition.
+MFCCs are ensitive to noise in audio. To make them robust, the MFCCs are generally normalized to recognize speech. Another proposed modification is to raise the log-mel-amplitudes to a suitable power before the DCT which reduces the effect of low power components.
 
+In the plots below, the waveplot is of a clean audio. The second graph shows the 20 MMFCCs computed over 146 frames. The third graph shows the same MFCCs but standardized.
+
+<p align="center"><img src="images/mfcc.png" /p>
 
 # Exploratory-Data-Analysis
 
