@@ -81,11 +81,23 @@ The first graph above which shows how the spectral factors respond differently f
 
 MFCC1 is one of the features that caught attention as it has peculiar differences in the classification. This is one of the features that was mainly checked for correlation with the output.
 
-# Data-Pipeline
+# Data Pipeline
 
-# Model-Selection
+# Machine Learning Modeling
 
-# Conclusion-and-Next-Steps
+I began the modeling with Logistic Regression and Random Forests. The accuracy for the Logistic Regression was 0.96 while that for Random Forests was 0.95. Shown below are the ROC curves and Precision-Recall curve for both the models.
+
+<p align="center"><img src="images/ROC_classification_models.png" /p>
+
+<p align="center"><img src="images/precision_recall_classification_models.png" /p>
+
+Concluding from the above plots, I decided to continue with the Logistic Regression Model. To obtain the important features, feature importances were derived using Random Forests. The plot for the same is shown below,
+
+<p align="center"><img src="images/feature_importance.png" /p>
+
+# Checking for Leakage
+
+# Conclusion and Next Steps
 
 # References
 
