@@ -69,6 +69,18 @@ In the plots below, the waveplot is of a clean audio. The second graph shows the
 
 # Exploratory-Data-Analysis
 
+EDA began with identifying how different features contribute differently to the classification.
+
+<p align="center"><img src="images/spectral_eda.png" /p>
+
+The first graph above which shows how the spectral factors respond differently for clean and noisy data. Images below display the same for the rmse feature.
+
+<p align="center"><img src="images/rmse_eda.png" /p>
+
+<p align="center"><img src="images/mfcc1_eda.png" /p>
+
+MFCC1 is one of the features that caught attention as it has peculiar differences in the classification. This is one of the features that was mainly checked for correlation with the output.
+
 # Data-Pipeline
 
 # Model-Selection
