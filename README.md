@@ -46,7 +46,7 @@ The first graph shows one clean audio waveplot. The second one is zooming in to 
 
 #### Spectral Centroid:
 
-Spectral Centroid is one of the features used to characterize specturm. It indicates the 
+Spectral Centroid is one of the features used to characterize specturm. It indicates the center of mass of the spectrum. It is widely used in digital audio and music processing to measure the perceived sound quality. 
 
 <p align="center"><img src="images/spectral_centroid.png" /p>
 
