@@ -31,6 +31,8 @@ The following waveplots of the first clean and noisy audio file will provide a v
 
 # Feature Selection
 
+<p align="center"><img src="https://docs.google.com/presentation/d/1zzgNu_HbKL2iPkHS8-qhtDV20QfWt9lC3ZwPVZo8Rw0/pub?start=false&loop=false&delayms=3000&slide=id.g5a7a9806e_0_84" /p>
+
 Librosa library was used to extract the features from the audio files. All of the 1650 audio files were individually divided into the following features,
 
 #### Zero Crossing Rate (ZCR):
@@ -43,6 +45,8 @@ The plot shown below will provide a visual representation of how ZCR is calculat
 The first graph shows one clean audio waveplot. The second one is zooming in to observe how many times the signal crosses zero. Even though the second plot shows 4 times, the signal is fluctuating. Hence, further inspection is needed which can be observed in the third plot. 
 
 #### Spectral Centroid:
+
+Spectral Centroid is one of the features used to characterize specturm. It indicates the 
 
 <p align="center"><img src="images/spectral_centroid.png" /p>
 
