@@ -83,6 +83,8 @@ MFCC1 is one of the features that caught attention as it has peculiar difference
 
 # Data Pipeline
 
+<p align="center"><img src="images/data_pipeline.png" /p>
+
 # Machine Learning Modeling
 
 I began the modeling with Logistic Regression and Random Forests. The accuracy for the Logistic Regression was 0.96 while that for Random Forests was 0.95. Shown below are the ROC curves and Precision-Recall curve for both the models.
