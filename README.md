@@ -10,7 +10,7 @@ by <img src= "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linked
 - [Exploratory Data Analysis](#Exploratory-Data-Analysis)
 - [Data Pipeline](#Data-Pipeline)
 - [Modeling](#Modeling)
-- [Leakage Check] (#Leakage-Check)
+- [Leakage Check](#Leakage-Check)
 - [Conclusion and Next Steps](#Conclusion-and-Next-Steps)
 
 
@@ -117,15 +117,15 @@ Turning around the datasets, 28-speaker dataset was used for training and valida
 
 The obtained accuracy for the Logistic Regression was 0.997, Random Forests was 1.0, and for Neural Network was 0.998. Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/ROC_28_train_54_test.png" /p>
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/precision_recall_28_train_54_test.png" /p>
 
 Now shown below are the Loss and Accuracy graph for train and validation data,
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/loss_28_train_54_test.png" /p>
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/acc_28_train_54_test.png" /p>
 
 Feature importances were derived using Random Forests. The plot for the same is shown below,
 
@@ -147,7 +147,11 @@ These plots above clearly show that there is no leakage as there is no close cor
 
 # Conclusion and Next Steps
 
-xyz
+Good classification accuracy was achieved using different models. This classification will help seperate the noisy files to run through the noise reduction model.
+
+The noise reduction model is currenly being worked on using the 56-speaker dataset. AWS S2 and EC2 are also being utilized for faster computation. The Neural Network being build is Convolutional Encoder-Decoder.
+
+The plan is to deploy a website using flask so that anyone can upload a wav file and get the audio file denoised.
 
 
 # References
