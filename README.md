@@ -99,19 +99,39 @@ MFCC1 is one of the features that caught attention as it has peculiar difference
 
 Models used were Logistic Regression, Random Forest Classifier, and Neural Network. 
 
-Initially 56-speaker dataset was used to training and validation of the model and 28-speaker dataset for testing. The obtained accuracy for the Logistic Regression was 0.96, Random Forests was 0.95, and for Neural Network was 0.99.
+Initially 56-speaker dataset was used to training and validation of the model, while 28-speaker dataset for testing. The results presented below are for the above conbination of the datasets.
 
-Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
+The obtained accuracy for the Logistic Regression was 0.998, Random Forests was 1.0, and for Neural Network was 0.999. Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
 
 <p align="center"><img src="images/ROC_classification_models.png" /p>
 
 <p align="center"><img src="images/precision_recall_classification_models.png" /p>
 
-Concluding from the above plots, I decided to continue with the Logistic Regression Model. To obtain the important features, feature importances were derived using Random Forests. The plot for the same is shown below,
+Now shown below are the Loss and Accuracy graph for train and validation data,
+
+<p align="center"><img src="" /p>
+
+<p align="center"><img src="" /p>
+
+Turning around the datasets, 28-speaker dataset was used for training and validation of the model, while 56-speaker dataset for testing. The following results presented below are for the above conbination of the datasets.
+
+The obtained accuracy for the Logistic Regression was 0.997, Random Forests was 1.0, and for Neural Network was 0.998. Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
+
+<p align="center"><img src="" /p>
+
+<p align="center"><img src="" /p>
+
+Now shown below are the Loss and Accuracy graph for train and validation data,
+
+<p align="center"><img src="" /p>
+
+<p align="center"><img src="" /p>
+
+Feature importances were derived using Random Forests. The plot for the same is shown below,
 
 <p align="center"><img src="images/feature_importance.png" /p>
 
-The graph above shows that MFCC1 is definately one of the most important features for classification. 
+The graph above shows that MFCC1 is definately one of the most important features for classification.
 
 
 # Leakage Check
