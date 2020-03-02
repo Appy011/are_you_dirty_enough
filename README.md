@@ -97,7 +97,11 @@ MFCC1 is one of the features that caught attention as it has peculiar difference
 
 # Modeling
 
-I began the modeling with Logistic Regression and Random Forests. The accuracy for the Logistic Regression was 0.96 while that for Random Forests was 0.95. Shown below are the ROC curves and Precision-Recall curve for both the models.
+Models used were Logistic Regression, Random Forest Classifier, and Neural Network. 
+
+Initially 56-speaker dataset was used to training and validation of the model and 28-speaker dataset for testing. The obtained accuracy for the Logistic Regression was 0.96, Random Forests was 0.95, and for Neural Network was 0.99.
+
+Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
 
 <p align="center"><img src="images/ROC_classification_models.png" /p>
 
@@ -107,7 +111,7 @@ Concluding from the above plots, I decided to continue with the Logistic Regress
 
 <p align="center"><img src="images/feature_importance.png" /p>
 
-The graph above shows that MFCC1 is definately one of the most important features in this data.
+The graph above shows that MFCC1 is definately one of the most important features for classification. 
 
 
 # Leakage Check
