@@ -9,22 +9,27 @@ by <img src= "https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linked
 - [Feature Selection](#Feature-Selection)
 - [Exploratory Data Analysis](#Exploratory-Data-Analysis)
 - [Data Pipeline](#Data-Pipeline)
-- [Model Selection](#Model-Selection)
+- [Modeling](#Modeling)
+- [Leakage Check] (#Leakage-Check)
 - [Conclusion and Next Steps](#Conclusion-and-Next-Steps)
 
 
 # Introduction
 
-Decades of research has been done in the field of signal processing. This performance saturation has been stirred by the recent advances in Machine Learning and AI. The motivation is to work on a speech enhancement project. It is used in several applications such as hearing aids, teleconferrence systems, VoIP. Traditionally cleaning of audio has been done by statistical signal processing. With machine learning and AI, data-driven ways for the same are being explored.
+Decades of research has been done in the field of signal processing. This performance saturation has been stirred by the recent advances in Machine Learning and AI, where data-driven methods are being explored. It is used in several applications such as hearing aids, teleconferrence systems, VoIP. Traditionally cleaning of audio has been done by statistical signal processing. 
 
-This aim of this project is to label given audio file as 'Clean' or 'Noisy'. This would assist in the following project of speech enhancement. 
+The motivation of this work is to design noisy reduction model. In the first part of the project, the audio files will be classified as 'Clean' and 'Noisy'. In the second part of the project, audio files classified as noisy will be denoised to obtain a clean speech audio file.
 
 
 # Overview of the Data
 
-The data was published by University of Edinburgh, UK. The data was made available on 08/21/2017 by the creator, Valentini-Botinhao. The data is made available to train speech enhancement models. The data used consist of 825 clean audio files and 825 noisy audio files.
+The data was published by University of Edinburgh, UK. The data was made available on 08/21/2017 by the creator, Valentini-Botinhao. The data is made available to train speech enhancement models.
 
-The following waveplots of the first clean and noisy audio file will provide a visual representation of the background noise,
+The data used in the first part of the project is 28-speaker and 56-speaker datasets where about 400 audio files for each speaker were recorded. The models have been trained on 28-speaker dataset with 56-speaker dataset for testing and vice versa.
+
+The 56-speaker dataset will be used to train the Convolutional Encoder-Decoder for reducing the noise.
+
+To get a feel of what the audio files look like, a visual representation of the first clean and noisy audio files are presented below,
 
 <p align="center"><img src="images/waveplots.png" /p>
 
@@ -33,7 +38,7 @@ The following waveplots of the first clean and noisy audio file will provide a v
 
 <p align="center"><img src="images/signal_decomposition.png" /p>
 
-Librosa library was used to extract the features from the audio files. All of the 1650 audio files were individually divided into the following features,
+Librosa library was used to extract the features from the audio files. For the first part, all of the audio files were individually divided into the following features,
 
 #### Zero Crossing Rate (ZCR):
 
@@ -67,6 +72,9 @@ In the plots below, the waveplot is of a clean audio. The second graph shows the
 
 <p align="center"><img src="images/mfcc.png" /p>
 
+In the second half, instead of using MFCCs as the main decomposition factor, STFTs are being used. When using Encoder-Decoder, STFTs are found to restore the features of audio better than MFCCs.
+
+
 # Exploratory-Data-Analysis
 
 EDA began with identifying how different features contribute differently to the classification.
@@ -81,25 +89,52 @@ The first graph above which shows how the spectral factors respond differently f
 
 MFCC1 is one of the features that caught attention as it has peculiar differences in the classification. This is one of the features that was mainly checked for correlation with the output.
 
+
 # Data Pipeline
 
 <p align="center"><img src="images/data_pipeline.png" /p>
 
-# Machine Learning Modeling
 
-I began the modeling with Logistic Regression and Random Forests. The accuracy for the Logistic Regression was 0.96 while that for Random Forests was 0.95. Shown below are the ROC curves and Precision-Recall curve for both the models.
+# Modeling
+
+Models used were Logistic Regression, Random Forest Classifier, and Neural Network. 
+
+Initially 56-speaker dataset was used to training and validation of the model, while 28-speaker dataset for testing. The results presented below are for the above conbination of the datasets.
+
+The obtained accuracy for the Logistic Regression was 0.998, Random Forests was 1.0, and for Neural Network was 0.999. Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
 
 <p align="center"><img src="images/ROC_classification_models.png" /p>
 
 <p align="center"><img src="images/precision_recall_classification_models.png" /p>
 
-Concluding from the above plots, I decided to continue with the Logistic Regression Model. To obtain the important features, feature importances were derived using Random Forests. The plot for the same is shown below,
+Now shown below are the Loss and Accuracy graph for train and validation data,
+
+<p align="center"><img src="" /p>
+
+<p align="center"><img src="" /p>
+
+Turning around the datasets, 28-speaker dataset was used for training and validation of the model, while 56-speaker dataset for testing. The following results presented below are for the above conbination of the datasets.
+
+The obtained accuracy for the Logistic Regression was 0.997, Random Forests was 1.0, and for Neural Network was 0.998. Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
+
+<p align="center"><img src="" /p>
+
+<p align="center"><img src="" /p>
+
+Now shown below are the Loss and Accuracy graph for train and validation data,
+
+<p align="center"><img src="" /p>
+
+<p align="center"><img src="" /p>
+
+Feature importances were derived using Random Forests. The plot for the same is shown below,
 
 <p align="center"><img src="images/feature_importance.png" /p>
 
-The graph above shows that MFCC1 is definately one of the most important features in this data.
+The graph above shows that MFCC1 is definately one of the most important features for classification.
 
-# Checking for Leakage
+
+# Leakage Check
 
 The feature importance was run repitatively for 7 times and the most common  7 features that showed up selected. These features were then run through Logistic Regression and plotted ROC and Precision-Recall curves. They are shown below,
 
@@ -109,7 +144,11 @@ The feature importance was run repitatively for 7 times and the most common  7 f
 
 These plots above clearly show that there is no leakage as there is no close correlation between the features and the original model curves. Nevertheless, MFCC1 seems to have an heavy influence on the classification of the used data. The accuracy for MFCC1 alone using Logistic Regression seems to vary from 0.81 to 0.88 with an R-square from 0.27 to 0.55.
 
+
 # Conclusion and Next Steps
+
+xyz
+
 
 # References
 
