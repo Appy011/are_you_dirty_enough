@@ -103,15 +103,15 @@ Initially 56-speaker dataset was used to training and validation of the model, w
 
 The obtained accuracy for the Logistic Regression was 0.998, Random Forests was 1.0, and for Neural Network was 0.999. Shown below are the ROC curves and Precision-Recall curve for Logistic Regression and Random Forest Classifier,
 
-<p align="center"><img src="images/ROC_classification_models.png" /p>
+<p align="center"><img src="images/ROC_54_train_28_test.png" /p>
 
-<p align="center"><img src="images/precision_recall_classification_models.png" /p>
+<p align="center"><img src="images/precision_recall_54_train_28_test.png" /p>
 
 Now shown below are the Loss and Accuracy graph for train and validation data,
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/loss_54_train_28_test.png" /p>
 
-<p align="center"><img src="" /p>
+<p align="center"><img src="images/acc_54_train_28_test.png" /p>
 
 Turning around the datasets, 28-speaker dataset was used for training and validation of the model, while 56-speaker dataset for testing. The following results presented below are for the above conbination of the datasets.
 
